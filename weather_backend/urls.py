@@ -16,8 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+def root_view(request):
+    """Root endpoint that returns API information"""
+    return JsonResponse({
+        "message": "Weather API Backend",
+        "version": "1.0.0",
+        "endpoints": {
+            "weather": "/api/weather/",
+            "admin": "/admin/",
+        },
+        "status": "running"
+    })
 
 urlpatterns = [
+    path('', root_view, name='root'),
     path('admin/', admin.site.urls),
     path('api/', include('weather.urls')),
 ]

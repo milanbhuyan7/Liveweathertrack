@@ -152,6 +152,7 @@ USE_TZ = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://liveweathertrack.onrender.com",
     "https://your-frontend-domain.onrender.com",  # Update this with your actual frontend domain
 ]
 
@@ -244,11 +245,6 @@ SESSION_SAVE_EVERY_REQUEST = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
 
 # WhiteNoise configuration for static files
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
