@@ -29,7 +29,12 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-n!=uwl%@igu7fn(9hh33=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)  # Temporarily enable DEBUG for troubleshooting
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,.onrender.com,liveweathertrack.onrender.com').split(',')
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".onrender.com",
+    "liveweathertrack.onrender.com"
+]
 
 
 # Application definition
