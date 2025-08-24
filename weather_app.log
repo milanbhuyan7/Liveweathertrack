@@ -1,0 +1,90 @@
+INFO 2025-08-24 17:12:26,710 services 16304 30836 Fetching current weather for London, GB
+INFO 2025-08-24 17:12:26,721 services 16304 28532 Fetching current weather for Sydney, AU
+INFO 2025-08-24 17:12:26,763 services 16304 37720 Fetching current weather for Mumbai, IN
+INFO 2025-08-24 17:12:26,779 services 16304 29004 Fetching current weather for Paris, FR
+INFO 2025-08-24 17:12:26,930 services 16304 1956 Fetching current weather for Tokyo, JP
+INFO 2025-08-24 17:12:26,973 services 16304 33648 Fetching current weather for New York, US
+INFO 2025-08-24 17:12:27,986 services 16304 30836 Fetched and cached fresh weather data for London
+INFO 2025-08-24 17:12:27,987 services 16304 37720 Fetched and cached fresh weather data for Mumbai
+INFO 2025-08-24 17:12:27,987 services 16304 28532 Fetched and cached fresh weather data for Sydney
+INFO 2025-08-24 17:12:27,987 services 16304 29004 Fetched and cached fresh weather data for Paris
+INFO 2025-08-24 17:12:27,988 services 16304 1956 Fetched and cached fresh weather data for Tokyo
+INFO 2025-08-24 17:12:28,029 services 16304 33648 Fetched and cached fresh weather data for New York
+INFO 2025-08-24 17:12:30,150 services 16304 37720 Fetching current weather for Cairo, EG
+INFO 2025-08-24 17:12:30,151 services 16304 30836 Fetching current weather for São Paulo, BR
+INFO 2025-08-24 17:12:30,348 services 16304 28532 Fetching forecast for New York, US
+INFO 2025-08-24 17:12:30,364 services 16304 33648 Fetching forecast for London, GB
+INFO 2025-08-24 17:12:30,454 services 16304 1956 Fetching forecast for Paris, FR
+INFO 2025-08-24 17:12:30,478 services 16304 29004 Fetching forecast for Tokyo, JP
+ERROR 2025-08-24 17:12:31,117 services 16304 28532 Unexpected error fetching forecast for New York: module 'django.utils.timezone' has no attribute 'utc'
+ERROR 2025-08-24 17:12:31,130 services 16304 33648 Unexpected error fetching forecast for London: module 'django.utils.timezone' has no attribute 'utc'
+INFO 2025-08-24 17:12:31,158 services 16304 37720 Fetched and cached fresh weather data for Cairo
+INFO 2025-08-24 17:12:31,171 services 16304 30836 Fetched and cached fresh weather data for São Paulo
+ERROR 2025-08-24 17:12:31,227 services 16304 1956 Unexpected error fetching forecast for Paris: module 'django.utils.timezone' has no attribute 'utc'
+ERROR 2025-08-24 17:12:31,266 services 16304 29004 Unexpected error fetching forecast for Tokyo: module 'django.utils.timezone' has no attribute 'utc'
+ERROR 2025-08-24 17:12:31,352 views 16304 28532 Forecast API error for city New York: Failed to fetch forecast data
+ERROR 2025-08-24 17:12:31,356 log 16304 28532 Service Unavailable: /api/cities/3/forecast/
+ERROR 2025-08-24 17:12:31,362 views 16304 33648 Forecast API error for city London: Failed to fetch forecast data
+ERROR 2025-08-24 17:12:31,363 log 16304 33648 Service Unavailable: /api/cities/2/forecast/
+ERROR 2025-08-24 17:12:31,464 views 16304 1956 Forecast API error for city Paris: Failed to fetch forecast data
+ERROR 2025-08-24 17:12:31,469 log 16304 1956 Service Unavailable: /api/cities/5/forecast/
+ERROR 2025-08-24 17:12:31,524 views 16304 29004 Forecast API error for city Tokyo: Failed to fetch forecast data
+ERROR 2025-08-24 17:12:31,527 log 16304 29004 Service Unavailable: /api/cities/4/forecast/
+INFO 2025-08-24 17:12:32,831 services 16304 28532 Returning cached weather data for Mumbai
+INFO 2025-08-24 17:12:32,833 services 16304 33648 Returning cached weather data for London
+INFO 2025-08-24 17:12:32,895 services 16304 37720 Returning cached weather data for New York
+INFO 2025-08-24 17:12:32,914 services 16304 30836 Returning cached weather data for Sydney
+INFO 2025-08-24 17:12:33,011 services 16304 1956 Returning cached weather data for Paris
+INFO 2025-08-24 17:12:33,099 services 16304 29004 Returning cached weather data for Tokyo
+INFO 2025-08-24 17:12:34,608 services 16304 37720 Returning cached weather data for Cairo
+INFO 2025-08-24 17:12:34,661 services 16304 30836 Returning cached weather data for São Paulo
+INFO 2025-08-24 17:12:34,802 services 16304 28532 Fetching forecast for New York, US
+INFO 2025-08-24 17:12:34,822 services 16304 33648 Fetching forecast for London, GB
+INFO 2025-08-24 17:12:34,983 services 16304 1956 Fetching forecast for Paris, FR
+INFO 2025-08-24 17:12:35,120 services 16304 29004 Fetching forecast for Tokyo, JP
+ERROR 2025-08-24 17:12:35,770 services 16304 33648 Unexpected error fetching forecast for London: module 'django.utils.timezone' has no attribute 'utc'
+ERROR 2025-08-24 17:12:35,771 services 16304 28532 Unexpected error fetching forecast for New York: module 'django.utils.timezone' has no attribute 'utc'
+ERROR 2025-08-24 17:12:35,779 services 16304 1956 Unexpected error fetching forecast for Paris: module 'django.utils.timezone' has no attribute 'utc'
+ERROR 2025-08-24 17:12:36,015 views 16304 33648 Forecast API error for city London: Failed to fetch forecast data
+ERROR 2025-08-24 17:12:36,016 services 16304 29004 Unexpected error fetching forecast for Tokyo: module 'django.utils.timezone' has no attribute 'utc'
+ERROR 2025-08-24 17:12:36,017 log 16304 33648 Service Unavailable: /api/cities/2/forecast/
+ERROR 2025-08-24 17:12:36,017 views 16304 28532 Forecast API error for city New York: Failed to fetch forecast data
+ERROR 2025-08-24 17:12:36,018 views 16304 1956 Forecast API error for city Paris: Failed to fetch forecast data
+ERROR 2025-08-24 17:12:36,020 log 16304 28532 Service Unavailable: /api/cities/3/forecast/
+ERROR 2025-08-24 17:12:36,022 log 16304 1956 Service Unavailable: /api/cities/5/forecast/
+ERROR 2025-08-24 17:12:36,262 views 16304 29004 Forecast API error for city Tokyo: Failed to fetch forecast data
+ERROR 2025-08-24 17:12:36,264 log 16304 29004 Service Unavailable: /api/cities/4/forecast/
+INFO 2025-08-24 17:17:07,642 services 25392 21136 Returning database cached weather data for Tokyo
+INFO 2025-08-24 17:17:07,714 services 25392 38020 Returning database cached weather data for London
+INFO 2025-08-24 17:17:07,754 services 25392 37044 Returning database cached weather data for New York
+INFO 2025-08-24 17:17:07,849 services 25392 22308 Returning database cached weather data for Paris
+INFO 2025-08-24 17:17:07,878 services 25392 20792 Returning database cached weather data for Sydney
+INFO 2025-08-24 17:17:08,327 services 25392 42904 Returning database cached forecast data for London
+INFO 2025-08-24 17:17:09,729 services 25392 38020 Returning database cached weather data for Mumbai
+INFO 2025-08-24 17:17:09,835 services 25392 20792 Returning database cached weather data for Cairo
+INFO 2025-08-24 17:17:10,111 services 25392 21136 Returning database cached forecast data for New York
+INFO 2025-08-24 17:17:10,232 services 25392 37044 Returning database cached forecast data for Tokyo
+INFO 2025-08-24 17:17:10,288 services 25392 22308 Returning database cached forecast data for Paris
+INFO 2025-08-24 17:17:11,179 services 25392 42904 Returning database cached weather data for São Paulo
+INFO 2025-08-24 17:17:11,494 services 25392 38020 Returning cached weather data for Tokyo
+INFO 2025-08-24 17:17:11,694 services 25392 20792 Returning cached weather data for London
+INFO 2025-08-24 17:17:12,883 services 25392 21136 Returning cached weather data for New York
+INFO 2025-08-24 17:17:12,946 services 25392 22308 Returning cached weather data for Sydney
+INFO 2025-08-24 17:17:12,969 services 25392 42904 Returning cached weather data for Paris
+INFO 2025-08-24 17:17:13,045 services 25392 37044 Returning cached forecast data for London
+INFO 2025-08-24 17:17:13,261 services 25392 38020 Returning cached weather data for Mumbai
+INFO 2025-08-24 17:17:13,438 services 25392 20792 Returning cached weather data for Cairo
+INFO 2025-08-24 17:17:14,710 services 25392 42904 Returning cached forecast data for Paris
+INFO 2025-08-24 17:17:14,711 services 25392 22308 Returning cached weather data for São Paulo
+INFO 2025-08-24 17:17:14,712 services 25392 21136 Returning cached forecast data for New York
+INFO 2025-08-24 17:17:14,987 services 25392 38020 Returning cached forecast data for Tokyo
+INFO 2025-08-24 17:17:35,330 views 25392 22308 Attempting to add city: BENGALURU, IN
+INFO 2025-08-24 17:17:38,362 services 25392 22308 Fetching current weather for BENGALURU, IN
+INFO 2025-08-24 17:17:38,774 services 25392 22308 Updated coordinates for BENGALURU
+INFO 2025-08-24 17:17:40,479 services 25392 22308 Fetched and cached fresh weather data for BENGALURU
+INFO 2025-08-24 17:17:40,480 views 25392 22308 Successfully added and validated city: BENGALURU, IN
+INFO 2025-08-24 17:17:42,082 services 25392 22308 Returning cached weather data for BENGALURU
+INFO 2025-08-24 17:17:43,687 services 25392 22308 Returning cached weather data for BENGALURU
+INFO 2025-08-24 17:19:47,254 services 25392 32312 Returning cached forecast data for New York
+INFO 2025-08-24 17:19:54,146 services 25392 32312 Returning cached forecast data for Paris
+INFO 2025-08-24 17:19:56,333 services 25392 35684 Returning cached forecast data for Tokyo
