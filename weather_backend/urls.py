@@ -36,9 +36,14 @@ def health_check(request):
     """Simple health check endpoint"""
     return HttpResponse("OK", content_type="text/plain")
 
+def test_view(request):
+    """Very simple test view to debug 400 errors"""
+    return HttpResponse("Test OK", content_type="text/plain")
+
 urlpatterns = [
     path('', root_view, name='root'),
     path('health/', health_check, name='health'),
+    path('test/', test_view, name='test'),
     path('admin/', admin.site.urls),
     path('api/', include('weather.urls')),
 ]

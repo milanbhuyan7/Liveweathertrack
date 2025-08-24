@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-n!=uwl%@igu7fn(9hh33=2xoo63jz^)^wgod584mkkt_--j3z1')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)  # Temporarily enable DEBUG for troubleshooting
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,.onrender.com,liveweathertrack.onrender.com').split(',')
 
@@ -100,7 +100,9 @@ try:
     DATABASES = {
         'default': dj_database_url.parse(DATABASE_URL)
     }
+    print(f"Database configured successfully with URL: {DATABASE_URL[:50]}...")
 except Exception as e:
+    print(f"Database configuration error: {e}")
     # Fallback to individual database settings if DATABASE_URL parsing fails
     DATABASES = {
         'default': {
@@ -112,6 +114,7 @@ except Exception as e:
             'PORT': config('DB_PORT', default='5432'),
         }
     }
+    print("Using fallback database configuration")
 
 
 # Password validation
