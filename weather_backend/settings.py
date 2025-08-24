@@ -29,7 +29,7 @@ SECRET_KEY = config('SECRET_KEY', default='django-insecure-n!=uwl%@igu7fn(9hh33=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,.onrender.com').split(',')
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,.onrender.com,liveweathertrack.onrender.com').split(',')
 
 
 # Application definition
@@ -91,31 +91,27 @@ WSGI_APPLICATION = 'weather_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASE_URL = config(
-    'DATABASE_URL', 
-    default='postgresql://feedback_user:2YUjcbWrq9FmaPuSRCIQyqtilLxDAQvA@dpg-d1chjrndiees73c4pt50-a.oregon-postgres.render.com/feedback_grk6'
-)
-
-DATABASES = {
-    'default': dj_database_url.parse(DATABASE_URL)
-}
-
-# Fallback to individual database settings if DATABASE_URL parsing fails
-from decouple import config
-
-# Initialize DATABASES if not already defined
-DATABASES = DATABASES or {}
-
-if not DATABASES.get('default'):
-    DATABASES['default'] = {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME', default='weather_9gyr'),
-        'USER': config('DB_USER', default='weather_9gyr_user'),
-        'PASSWORD': config('DB_PASSWORD', default='GzbANKGSIsK8ygzLwJ2ZshnRmQ7sypBz'),
-        'HOST': config('DB_HOST', default='dpg-d2ld9p15pdvs73aj2e70-a.oregon-postgres.render.com'),  # Fixed host
-        'PORT': config('DB_PORT', default='5432'),
+try:
+    DATABASE_URL = config(
+        'DATABASE_URL', 
+        default='postgresql://feedback_user:2YUjcbWrq9FmaPuSRCIQyqtilLxDAQvA@dpg-d1chjrndiees73c4pt50-a.oregon-postgres.render.com/feedback_grk6'
+    )
+    
+    DATABASES = {
+        'default': dj_database_url.parse(DATABASE_URL)
     }
-
+except Exception as e:
+    # Fallback to individual database settings if DATABASE_URL parsing fails
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': config('DB_NAME', default='weather_9gyr'),
+            'USER': config('DB_USER', default='weather_9gyr_user'),
+            'PASSWORD': config('DB_PASSWORD', default='GzbANKGSIsK8ygzLwJ2ZshnRmQ7sypBz'),
+            'HOST': config('DB_HOST', default='dpg-d2ld9p15pdvs73aj2e70-a.oregon-postgres.render.com'),
+            'PORT': config('DB_PORT', default='5432'),
+        }
+    }
 
 
 # Password validation

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 @csrf_exempt
@@ -32,8 +32,13 @@ def root_view(request):
         "status": "running"
     })
 
+def health_check(request):
+    """Simple health check endpoint"""
+    return HttpResponse("OK", content_type="text/plain")
+
 urlpatterns = [
     path('', root_view, name='root'),
+    path('health/', health_check, name='health'),
     path('admin/', admin.site.urls),
     path('api/', include('weather.urls')),
 ]
